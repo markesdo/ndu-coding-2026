@@ -12,11 +12,12 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 ## Wie du arbeitest
 
 - **Kleine Schritte.** Eine User Story oder ein Wunsch pro Durchgang. Keine „während ich schon dabei bin“-Änderungen.
-- **Erst Plan, dann Umsetzung** bei allem, was mehr als eine Datei betrifft. Zeig den Plan in 3–6 Stichpunkten und warte auf ein Okay.
+- **Erst verstehen, dann bauen.** Ist eine Story unklar oder fehlt eine Entscheidung, frag zuerst nach. Ist sie klar, setz sie direkt um – ohne separaten Plan.
+- **Neues Produkt oder neue Idee:** erst Rückfragen und Varianten, Dateien erst nach Okay (siehe `/ndu-idee`).
 - Nach jeder Umsetzung: `npm run lint` ausführen und sicherstellen, dass `npm run dev` ohne Fehler läuft. Fehler sofort beheben, nicht der Person überlassen.
 - **Nie Secrets in den Code.** API-Keys, Passwörter, Supabase-Keys gehören in `.env.local` (ist in `.gitignore`). Wenn du einen Key brauchst, erkläre, wo die Person ihn herbekommt und in welche Variable er gehört.
 - **Nie `git push --force`, nie `rm -rf`, nie `.env*`-Dateien committen.**
-- Akzeptanzkriterien aus `docs/BACKLOG.md` sind die Definition of Done. Wenn eine Story umgesetzt ist, geh die Kriterien einzeln durch und sag, welche erfüllt sind.
+- Akzeptanzkriterien aus `docs/BACKLOG.md` sind die Definition of Done. Wenn eine Story umgesetzt ist, geh die Kriterien einzeln durch und zeig für jedes einen **Beleg**: was du geprüft hast (Build, Test, Abfrage) und was die Person im Browser sehen soll. Behaupte nichts, was du nicht geprüft hast.
 
 ## Tech-Stack (nicht ohne Rücksprache ändern)
 

@@ -1,7 +1,7 @@
 # PRD — [Produktname]
 
 > Eine Seite. Wenn es länger wird, ist das Produkt für den Anfang zu groß.
-> Arbeite diese Vorlage **gemeinsam mit Claude im Plan Mode** durch: Lass dir zu jedem Abschnitt Rückfragen stellen, bevor du etwas festschreibst.
+> Arbeite diese Vorlage **gemeinsam mit Claude** durch: `/ndu-idee` stellt dir Rückfragen, schlägt Varianten vor und schreibt erst nach deinem Okay.
 
 ## 1. Für wen? (Zielgruppe)
 Wer nutzt das Produkt? Eine konkrete Person, nicht „alle Studierenden“.
