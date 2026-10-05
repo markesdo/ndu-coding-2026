@@ -58,7 +58,7 @@ export default function Home() {
           <h2 className="mb-2 text-xl font-semibold">Hier kommt die Eventliste hin</h2>
           <p className="mx-auto max-w-md text-sm text-muted">
             In <code className="rounded bg-accent-soft px-1">src/data/events.ts</code>{" "}
-            warten bereits {anzahl} Beispiel-Events. Deine erste User Story (S1 im
+            warten bereits {anzahl} Beispiel-Events. Dein erstes Issue (Issue 1 im
             Backlog) bringt sie auf diese Seite.
           </p>
         </section>
