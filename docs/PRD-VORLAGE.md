@@ -22,13 +22,17 @@ Nur, was für den ersten nützlichen Durchlauf nötig ist.
 2.
 3.
 
-## 6. User Stories mit Akzeptanzkriterien
-→ kommen in `docs/BACKLOG.md`. Hier nur die wichtigste als Beispiel:
+## 6. Issues mit Akzeptanzkriterien
+→ kommen in `docs/BACKLOG.md`. Hier nur das wichtigste als Beispiel:
 
-**Als** Organisatorin **möchte ich** ein Event mit Titel, Datum, Ort und Beschreibung anlegen, **damit** andere es finden können.
+**Ziel:** Organisator*innen legen ein Event mit Titel, Datum, Ort und Beschreibung an, damit andere es finden.
+**Nicht im Umfang:** Bearbeiten, Löschen, Bilder.
+**Akzeptanzkriterien:**
 - Gegeben ich bin auf der Startseite, wenn ich auf „Event anlegen“ klicke, dann sehe ich ein Formular mit Titel, Datum, Ort, Beschreibung.
 - Gegeben ich habe alle Felder ausgefüllt, wenn ich auf „Speichern“ klicke, dann erscheint das Event in der Liste und ist nach einem Reload noch da.
 - Gegeben der Titel ist leer, wenn ich auf „Speichern“ klicke, dann sehe ich eine verständliche Fehlermeldung und nichts wird gespeichert.
+
+**Fertig, wenn:** ein Event angelegt und nach Reload noch da; ein Versuch mit leerem Titel.
 
 ## 7. Woran merken wir, dass es funktioniert?
 Ein messbares Kriterium. *Beispiel: 5 Kommiliton*innen legen ohne Erklärung ein Event an und sagen zu.*

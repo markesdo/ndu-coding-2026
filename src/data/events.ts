@@ -1,5 +1,5 @@
 // Beispieldaten — bis die Datenbank (Supabase, Tag 2) angebunden ist.
-// Ein Event in der Vergangenheit ist absichtlich dabei (siehe Story S1).
+// Ein Event in der Vergangenheit ist absichtlich dabei (siehe Issue 1 im Backlog).
 
 export type Kategorie = "Lernen" | "Party" | "Sport" | "Vortrag";
 

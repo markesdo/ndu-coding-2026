@@ -29,7 +29,7 @@ Du musst **nichts installieren.** Alles läuft im Browser.
 | `src/components/` | Wiederverwendbare UI-Bausteine |
 | `src/data/events.ts` | Beispiel-Events, bis die Datenbank kommt (Tag 2) |
 | `docs/PRD-VORLAGE.md` | Vorlage für deine Produktbeschreibung |
-| `docs/BACKLOG.md` | User Stories mit Akzeptanzkriterien – deine Arbeitsliste |
+| `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
 | `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-explain`, `/ndu-check`, `/ndu-commit` |
