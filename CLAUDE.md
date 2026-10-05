@@ -21,14 +21,14 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 ## Tech-Stack (nicht ohne Rücksprache ändern)
 
 - Next.js (App Router, `src/app`), TypeScript, Tailwind CSS v4
-- Datenbank & Auth: **Supabase** (ab Tag 2), Zugriff über `@supabase/supabase-js` und `@supabase/ssr`
+- Datenbank & Auth: **Supabase** (ab Tag 2), Zugriff über `@supabase/supabase-js` und `@supabase/ssr`. Schlüssel: der **Publishable Key** (`sb_publishable_…`) in `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`; ein **Secret Key** (`sb_secret_…`) nur im Backend und nie mit `NEXT_PUBLIC_`. Die alten „anon“/„service_role“-Keys nicht verwenden.
 - UI: schlicht, modern, mobile-first. Keine zusätzlichen UI-Bibliotheken ohne Rücksprache.
 - Deployment: Vercel
 - Beispieldaten liegen in `src/data/events.ts`, bis die Datenbank angebunden ist.
 
 ## Projektstruktur
 
-- `src/app/` — Seiten und Routen (eine Mappe = eine URL)
+- `src/app/` — Seiten und Routen (ein Ordner = eine URL)
 - `src/components/` — wiederverwendbare UI-Bausteine
 - `src/data/` — Beispieldaten
 - `src/lib/` — Hilfsfunktionen, Supabase-Client
@@ -41,3 +41,4 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 Frontend, Backend, Datenbank, API, Hosting · Repository, Commit, Push · Kontextfenster, Plan Mode · PRD, User Story, Akzeptanzkriterium, MVP · Supabase, Vercel, `.env`. Alles andere kurz erklären.
 
 @AGENTS.md
+@docs/ENTSCHEIDUNGEN.md
