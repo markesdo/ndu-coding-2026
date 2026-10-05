@@ -24,7 +24,7 @@
 - Gegeben ich bin auf der Detailseite, dann gibt es einen Weg zurück zur Liste.
 - Gegeben ich rufe die Adresse eines Events auf, das es nicht gibt, dann sehe ich eine verständliche Meldung statt eines Fehlers.
 
-**Fertig, wenn:** zwei Events angeklickt, Adresse kopiert und in neuem Tab geöffnet, zurück zur Liste.
+**Fertig, wenn:** zwei Events angeklickt, Adresse kopiert und in neuem Tab geöffnet, zurück zur Liste; eine erfundene Event-Adresse aufgerufen und die Meldung gesehen.
 
 ### ⬜ Issue 3 — Nach Kategorie filtern
 **Ziel:** Studierende filtern die Liste nach Kategorie (Lernen, Party, Sport, Vortrag) und finden schneller, was sie interessiert.
@@ -32,9 +32,9 @@
 **Akzeptanzkriterien:**
 - Gegeben ich klicke auf „Sport“, dann sehe ich nur Sport-Events und der Filter ist sichtbar aktiv.
 - Gegeben ich klicke auf „Alle“, dann sehe ich wieder alle Events.
-- Gegeben eine Kategorie hat keine kommenden Events, wenn ich sie wähle, dann sehe ich einen Hinweis statt einer leeren Seite.
+- Gegeben ich habe „Sport“ gewählt, wenn ich danach „Party“ wähle, dann sehe ich nur Party-Events (Filter addieren sich nicht).
 
-**Fertig, wenn:** jede Kategorie einmal angeklickt, auch am Handy.
+**Fertig, wenn:** jede Kategorie einmal angeklickt, zweimal hintereinander gewechselt, auch am Handy.
 
 ## Tag 2 — Übung 3: Echte Daten (Supabase)
 
@@ -46,7 +46,7 @@
 - Gegeben der Titel ist leer oder das Datum liegt in der Vergangenheit, dann sehe ich eine verständliche Fehlermeldung und nichts wird gespeichert.
 - Gegeben ich schaue ins Supabase-Dashboard, dann sehe ich das Event in der Tabelle `events`.
 
-**Fertig, wenn:** ein Event angelegt, Seite neu geladen, Zeile im Supabase-Dashboard gesehen; ein Versuch mit leerem Titel.
+**Fertig, wenn:** ein Event angelegt, Seite neu geladen, Zeile im Supabase-Dashboard gesehen; je ein Versuch mit leerem Titel und mit vergangenem Datum – beide Male Fehlermeldung, keine neue Zeile.
 
 ## Tag 2 — Übung 4: Login & RSVP
 
@@ -58,7 +58,7 @@
 - Gegeben ich rufe `/meine-events` nicht angemeldet auf, dann werde ich zur Anmeldung geleitet.
 - Gegeben ich gebe ein falsches Passwort ein, dann sehe ich eine verständliche Fehlermeldung.
 
-**Fertig, wenn:** ein Testkonto registriert, ab- und wieder angemeldet, `/meine-events` ohne Login aufgerufen.
+**Fertig, wenn:** ein Testkonto registriert, ab- und wieder angemeldet, einmal mit falschem Passwort versucht, `/meine-events` ohne Login aufgerufen.
 
 ### ⬜ Issue 6 — Zusagen (RSVP)
 **Ziel:** Studierende sagen einem Event zu und können das zurücknehmen – damit Organisator*innen wissen, wie viele kommen.
@@ -78,7 +78,7 @@
 - Gegeben ich habe 2 Events zugesagt, dann sehe ich genau diese 2, sortiert nach Datum.
 - Gegeben ich habe nirgends zugesagt, dann sehe ich einen Hinweis mit Link zur Eventliste.
 
-**Fertig, wenn:** mit einem Testkonto zwei Zusagen gemacht und eine zurückgenommen, Liste stimmt jeweils.
+**Fertig, wenn:** mit einem Testkonto erst ohne Zusage (Hinweis sichtbar), dann zwei Zusagen gemacht und eine zurückgenommen – die Liste stimmt jeweils.
 
 ## Optional (Tag 2, wer schnell ist) — KI als Feature
 

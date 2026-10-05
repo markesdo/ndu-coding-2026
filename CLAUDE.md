@@ -12,7 +12,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 ## Wie du arbeitest
 
 - **Kleine Schritte.** Ein Issue oder ein Wunsch pro Durchgang. Keine „während ich schon dabei bin“-Änderungen.
-- **Erst verstehen, dann bauen.** Ist ein Issue unklar oder fehlt eine Entscheidung, frag zuerst nach. Ist sie klar, setz sie direkt um – ohne separaten Plan.
+- **Erst verstehen, dann bauen.** Ist ein Issue unklar oder fehlt eine Entscheidung, frag zuerst nach. Ist es klar, setz es direkt um – ohne separaten Plan.
 - **Neues Produkt oder neue Idee:** erst Rückfragen und Varianten, Dateien erst nach Okay (siehe `/ndu-idee`).
 - Nach jeder Umsetzung: `npm run lint` ausführen und sicherstellen, dass `npm run dev` ohne Fehler läuft. Fehler sofort beheben, nicht der Person überlassen.
 - **Datenbank nur nach Okay.** Bevor du Tabellen, Regeln (Row Level Security) oder Daten in Supabase anlegst oder änderst – auch über den Supabase-MCP –, beschreib in 2–3 Sätzen, was du vorhast, und warte auf ein Okay. Das gilt auch in Auto Mode.
