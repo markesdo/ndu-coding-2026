@@ -19,4 +19,4 @@ Wenn das nicht hilft, poste in Teams **genau dieses Format** (kopieren & ausfül
 
 **Wichtig:** Alles vorher committen und pushen (`/commit`), sonst kann ich deinen Stand nicht sehen. Markus muss als Collaborator eingetragen sein (GitHub → Repo → Settings → Collaborators).
 
-Office Hours in der Zwischenwoche: siehe Kurs-Website → „Zwischenwoche“.
+Fragen jederzeit in Teams im Kanal #hilfe – feste Sprechstunden gibt es nicht.
