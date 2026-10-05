@@ -34,7 +34,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - `src/components/` — wiederverwendbare UI-Bausteine
 - `src/data/` — Beispieldaten
 - `src/lib/` — Hilfsfunktionen, Supabase-Client
-- `docs/PRODUKT.md` — Produkt-Brief, eine Seite (schreibt die Person mit dir gemeinsam, `/ndu-idee`). Lies ihn, bevor du ein Issue umsetzt. Er lebt: Stellt sich beim Bauen oder Testen eine Annahme daraus als falsch heraus, sag es und schlag die Änderung vor (inkl. Stand-Zeile).
+- `docs/PRODUKT.md` — Produkt-Brief, eine Seite (schreibt die Person mit dir gemeinsam, `/ndu-idee`). Lies ihn (falls vorhanden), bevor du ein Issue umsetzt. Er lebt: Stellt sich beim Bauen oder Testen eine Annahme daraus als falsch heraus, sag es und schlag die Änderung vor (inkl. Stand-Zeile).
 - `docs/BACKLOG.md` — Issues (Ziel, Nicht im Umfang, Akzeptanzkriterien, Fertig wenn), priorisiert
 - `docs/ENTSCHEIDUNGEN.md` — Entscheidungen, die du dir merken sollst (hier eintragen, wenn etwas festgelegt wird)
 

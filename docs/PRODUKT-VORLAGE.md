@@ -25,7 +25,7 @@ Nur, was für den ersten nützlichen Durchlauf nötig ist. Jedes Stichwort wird 
 ## 6. Woran merken wir, dass es funktioniert?
 Wir glauben, dass [Zielgruppe] damit [Problem] löst.
 Wir merken es, wenn [messbar, mit 3–5 Menschen].
-*Beispiel: Wir merken es, wenn 5 Kommiliton*innen ohne Erklärung ein Event anlegen und zusagen.*
+*Beispiel: Wir merken es, wenn 5 Kommiliton\*innen ohne Erklärung ein Event anlegen und zusagen.*
 
 ## 7. Offene Fragen
 Was wissen wir noch nicht? Was hat der letzte Test offen gelassen?
