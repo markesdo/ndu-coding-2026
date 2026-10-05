@@ -28,7 +28,7 @@ Du musst **nichts installieren.** Alles läuft im Browser.
 | `src/app/` | Die Seiten der App (eine Mappe = eine URL) |
 | `src/components/` | Wiederverwendbare UI-Bausteine |
 | `src/data/events.ts` | Beispiel-Events, bis die Datenbank kommt (Tag 2) |
-| `docs/PRD-VORLAGE.md` | Vorlage für deine Produktbeschreibung |
+| `docs/PRODUKT-VORLAGE.md` | Vorlage für deinen Produkt-Brief (eine Seite, lebt mit dem Produkt) |
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
@@ -41,7 +41,7 @@ Diese vier Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu d
 
 | Befehl | Wann |
 |---|---|
-| `/ndu-idee` | Du startest ein neues Produkt: Claude fragt nach, schlägt Varianten vor und schreibt dann PRD und Backlog |
+| `/ndu-idee` | Du startest ein neues Produkt: Claude fragt nach, schlägt Varianten vor und schreibt dann Produkt-Brief und Backlog |
 | `/ndu-explain` | Du willst verstehen, was gerade im Projekt passiert |
 | `/ndu-check` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
 | `/ndu-commit` | Du hast etwas fertig und willst es sichern (Git = Undo-Knopf) |
