@@ -47,6 +47,15 @@
 **Als** Studentin **möchte ich** unter `/meine-events` sehen, wo ich zugesagt habe, **damit** ich den Überblick behalte.
 - Gegeben ich habe 2 Events zugesagt, dann sehe ich genau diese 2, sortiert nach Datum.
 
+## Optional (Tag 2, wer schnell ist) — KI als Feature
+
+### ⬜ S8 — Beschreibung vorschlagen lassen
+**Als** Organisator **möchte ich** mir aus Titel, Kategorie und Ort eine Eventbeschreibung vorschlagen lassen, **damit** ich schneller ein ansprechendes Event anlege.
+- Gegeben ich habe Titel, Kategorie und Ort ausgefüllt, wenn ich auf „Beschreibung vorschlagen“ klicke, dann erscheint nach wenigen Sekunden ein Vorschlag (2–3 Sätze, Deutsch) im Beschreibungsfeld, den ich bearbeiten kann.
+- Gegeben der Titel ist leer, dann ist der Button deaktiviert.
+- Gegeben ich klicke 6-mal innerhalb einer Minute, dann bekomme ich beim 6. Mal eine freundliche Meldung statt eines Vorschlags (Rate Limit).
+- Gegeben ich schaue in den Browser-Code (Netzwerk-Tab), dann ist dort **kein** API-Key sichtbar – der Aufruf läuft über eine eigene API-Route im Backend (`ANTHROPIC_API_KEY` in `.env.local`).
+
 ## Später / Ideen (nicht im MVP)
 - Erinnerung per E-Mail am Vortag
 - Event bearbeiten und absagen (nur Organisator)
