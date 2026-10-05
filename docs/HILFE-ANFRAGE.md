@@ -4,7 +4,7 @@ Bevor du in Teams schreibst, probiere **in dieser Reihenfolge**:
 
 1. **Fehlermeldung komplett kopieren** (Browser-Konsole oder Terminal) und Claude geben: „Erkläre mir zuerst in einfachen Worten, was passiert ist. Dann schlag eine Lösung vor.“
 2. Neue Session: `/clear`, dann das Problem **kleiner** formulieren.
-3. `/pruefe` ausführen.
+3. `/check` ausführen.
 4. Letzten funktionierenden Stand prüfen: Source Control → letzter Commit → „Discard Changes“ (Git als Undo-Knopf).
 
 Wenn das nicht hilft, poste in Teams **genau dieses Format** (kopieren & ausfüllen):

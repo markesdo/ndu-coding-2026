@@ -17,7 +17,7 @@ Du musst **nichts installieren.** Alles läuft im Browser.
 
    Oder klassisch in einem zweiten Terminal: `npm run dev` – rechts öffnet sich automatisch eine Vorschau (Port 3000).
 5. **Erste Frage stellen:**
-   > /erklaer
+   > /explain
 
    Claude erklärt dir, was in diesem Projekt steckt – ohne Code.
 
@@ -32,15 +32,15 @@ Du musst **nichts installieren.** Alles läuft im Browser.
 | `docs/BACKLOG.md` | User Stories mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
-| `.claude/commands/` | Eigene Befehle: `/erklaer`, `/pruefe`, `/commit` |
+| `.claude/commands/` | Eigene Befehle: `/explain`, `/check`, `/commit` |
 | `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
 
 ## Die drei wichtigsten Befehle
 
 | Befehl | Wann |
 |---|---|
-| `/erklaer` | Du willst verstehen, was gerade im Projekt passiert |
-| `/pruefe` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
+| `/explain` | Du willst verstehen, was gerade im Projekt passiert |
+| `/check` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
 | `/commit` | Du hast etwas fertig und willst es sichern (Git = Undo-Knopf) |
 
 ## Wenn etwas nicht geht
