@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Campus Events — NDU Coding 2026
 
-## Getting Started
+Dein Startpunkt für den Kurs **„Programmieren mit AI“** (MSc Management by Innovation, NDU).
+Du musst **nichts installieren.** Alles läuft im Browser.
 
-First, run the development server:
+## In 5 Schritten zur laufenden App
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: `campus-events`, Owner: dein GitHub-Account, Public. → „Create repository“.
+2. **Codespace starten:** in deinem neuen Repo auf den grünen Button **„Code“ → Tab „Codespaces“ → „Create codespace on main“**. Das dauert beim ersten Mal 2–4 Minuten. Du landest in VS Code im Browser.
+3. **Claude Code anmelden:** unten im **Terminal** eintippen:
+   ```
+   claude
+   ```
+   Es erscheint ein Link → anklicken → mit deinem Claude-Account (Claude Pro) anmelden → Code zurück ins Terminal kopieren. Das machst du nur einmal.
+4. **App starten:** in Claude Code eintippen (ja, auf Deutsch, in ganzen Sätzen):
+   > Starte die App und sag mir, wie ich sie im Browser öffne.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   Oder klassisch in einem zweiten Terminal: `npm run dev` – rechts öffnet sich automatisch eine Vorschau (Port 3000).
+5. **Erste Frage stellen:**
+   > /erklaer
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   Claude erklärt dir, was in diesem Projekt steckt – ohne Code.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Was ist hier drin?
 
-## Learn More
+| Ordner / Datei | Was es ist |
+|---|---|
+| `src/app/` | Die Seiten der App (eine Mappe = eine URL) |
+| `src/components/` | Wiederverwendbare UI-Bausteine |
+| `src/data/events.ts` | Beispiel-Events, bis die Datenbank kommt (Tag 2) |
+| `docs/PRD-VORLAGE.md` | Vorlage für deine Produktbeschreibung |
+| `docs/BACKLOG.md` | User Stories mit Akzeptanzkriterien – deine Arbeitsliste |
+| `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
+| `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
+| `.claude/commands/` | Eigene Befehle: `/erklaer`, `/pruefe`, `/commit` |
+| `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
 
-To learn more about Next.js, take a look at the following resources:
+## Die drei wichtigsten Befehle
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Befehl | Wann |
+|---|---|
+| `/erklaer` | Du willst verstehen, was gerade im Projekt passiert |
+| `/pruefe` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
+| `/commit` | Du hast etwas fertig und willst es sichern (Git = Undo-Knopf) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Wenn etwas nicht geht
 
-## Deploy on Vercel
+1. Fehlermeldung komplett kopieren → Claude geben: *„Erkläre mir zuerst in einfachen Worten, was passiert ist.“*
+2. `/clear` und das Problem kleiner formulieren.
+3. `docs/HILFE-ANFRAGE.md` lesen und in Teams posten.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Nach dem Kurstag
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Codespace **stoppen** (GitHub → Codespaces → „…“ → Stop), sonst läuft dein Freikontingent weiter. Deine Arbeit ist sicher, solange du gepusht hast (`/commit`).
+
+---
+Kurs-Website mit allen Konzepten, Prompts und Checklisten: *(Link folgt)*
