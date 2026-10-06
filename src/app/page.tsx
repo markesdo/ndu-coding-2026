@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { BellRing, CalendarDays, Hand } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
 import { events } from "@/data/events";
 
@@ -35,17 +36,17 @@ export default function Home() {
 
         <section className="mb-14 grid gap-4 sm:grid-cols-3">
           <FeatureCard
-            emoji="📅"
+            icon={CalendarDays}
             titel="Alles auf einen Blick"
             text="Alle Events deines Studiengangs chronologisch – ohne Scrollen durch Chats."
           />
           <FeatureCard
-            emoji="✋"
+            icon={Hand}
             titel="Mit einem Klick zusagen"
             text="Organisator*innen sehen sofort, wie viele kommen. Kein Nachfragen mehr."
           />
           <FeatureCard
-            emoji="🔔"
+            icon={BellRing}
             titel="Nichts mehr verpassen"
             text="Erinnerung am Vortag. Für die Dinge, die man sich fest vorgenommen hat."
           />
