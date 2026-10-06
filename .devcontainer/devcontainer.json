@@ -10,7 +10,7 @@
     "memory": "8gb"
   },
   "postCreateCommand": "npm install && claude --version",
-  "postStartCommand": "git config --global pull.rebase false",
+  "postStartCommand": "git config --global pull.rebase false && bash .devcontainer/git-identitaet.sh",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
