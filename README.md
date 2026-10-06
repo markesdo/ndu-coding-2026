@@ -32,12 +32,12 @@ Du musst **nichts installieren.** Alles läuft im Browser.
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
-| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-explain`, `/ndu-check`, `/ndu-commit` |
+| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
 | `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
 
-## Die vier wichtigsten Befehle
+## Die wichtigsten Befehle
 
-Diese vier Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu diesem Kurs-Template (Dateien in `.claude/commands/`), deshalb beginnen sie mit `ndu-`. Eingebaute Befehle wie `/clear`, `/compact` oder `/mcp` haben kein Präfix.
+Diese Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu diesem Kurs-Template (Dateien in `.claude/commands/`), deshalb beginnen sie mit `ndu-`. Eingebaute Befehle wie `/clear`, `/compact` oder `/mcp` haben kein Präfix.
 
 | Befehl | Wann |
 |---|---|
@@ -45,6 +45,9 @@ Diese vier Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu d
 | `/ndu-explain` | Du willst verstehen, was gerade im Projekt passiert |
 | `/ndu-check` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
 | `/ndu-commit` | Du hast etwas fertig und willst es sichern (Git = Undo-Knopf) |
+| `/ndu-beratung` | Du planst etwas Größeres, Claude dreht sich im Kreis oder du willst vor einem PR eine Zweitmeinung: Ein stärkeres Modell (Opus) schaut in einem eigenen Subagenten drauf |
+
+Claude arbeitet in diesem Projekt mit **Sonnet** – das schont dein Pro-Kontingent. Wie viel davon verbraucht ist, zeigt `/usage`.
 
 ## Wenn etwas nicht geht
 
