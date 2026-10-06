@@ -25,6 +25,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - Next.js (App Router, `src/app`), TypeScript, Tailwind CSS v4
 - Datenbank & Auth: **Supabase** (ab Tag 2), Zugriff über `@supabase/supabase-js` und `@supabase/ssr`. Schlüssel: der **Publishable Key** (`sb_publishable_…`) in `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`; ein **Secret Key** (`sb_secret_…`) nur im Backend und nie mit `NEXT_PUBLIC_`. Die alten „anon“/„service_role“-Keys nicht verwenden.
 - UI: schlicht, modern, mobile-first. Keine zusätzlichen UI-Bibliotheken ohne Rücksprache.
+- Icons: **Lucide** (`lucide-react`, schon installiert), keine Emojis in der Oberfläche. Dekorative Icons brauchen nichts; ein Icon ohne Text daneben (z. B. ein Button nur mit Icon) bekommt ein `aria-label`.
 - Deployment: Vercel
 - Beispieldaten liegen in `src/data/events.ts`, bis die Datenbank angebunden ist.
 
