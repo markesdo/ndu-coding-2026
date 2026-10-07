@@ -33,6 +33,7 @@
 - Gegeben ich klicke auf „Mode“, dann sehe ich nur Mode und der Filter ist sichtbar aktiv.
 - Gegeben ich klicke auf „Alle“, dann sehe ich wieder alle Gegenstände.
 - Gegeben ich habe „Mode“ gewählt, wenn ich danach „Technik“ wähle, dann sehe ich nur Technik (Filter addieren sich nicht).
+- Gegeben in einer Kategorie gibt es nichts, dann sehe ich einen Hinweis mit Link zu allen Gegenständen statt einer leeren Fläche.
 
 **Fertig, wenn:** jede Kategorie einmal angeklickt, zweimal hintereinander gewechselt, auch am Handy.
 
@@ -67,6 +68,7 @@
 - Gegeben ich bin angemeldet, wenn ich „Ausleihen anfragen“ klicke, dann steht der Button auf „Angefragt ✓“ und der Zähler „Anfragen“ steigt um 1.
 - Gegeben ich habe angefragt, wenn ich erneut klicke, dann ist die Anfrage zurückgezogen und der Zähler sinkt um 1.
 - Gegeben ich bin nicht angemeldet, wenn ich klicke, dann führt mich der Button zur Anmeldung.
+- Gegeben ich öffne die Detailseite am Handy, dann sehe ich den Button ohne zu scrollen.
 - Gegeben eine andere Person hat angefragt, dann kann ich **ihre** Anfrage nicht löschen (Row Level Security, Tabelle `requests`).
 
 **Fertig, wenn:** alle Kriterien im Browser durchgeklickt, Zähler stimmt auch nach einem Reload.

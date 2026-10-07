@@ -31,12 +31,23 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - Deployment: Vercel
 - Beispieldaten liegen in `src/data/gegenstaende.ts` (Bilder in `public/gegenstaende/`), bis die Datenbank angebunden ist.
 
+## UI-Regeln (gelten für jedes Issue)
+
+- **Mobil zuerst:** jede Seite auch bei 375 px prüfen – nichts ragt über den Rand, der Header bleibt einzeilig.
+- Antippbare Elemente (Buttons, Links außerhalb von Fließtext, Filter) sind mindestens 44 px hoch (`min-h-11`). Die wichtigste Aktion einer Seite ist am Handy ohne Scrollen erreichbar.
+- Header und Footer liegen in `src/app/layout.tsx`, nicht in den einzelnen Seiten. Seitentitel über `metadata`/`generateMetadata` – die Vorlage „%s – Leihbar“ ist gesetzt.
+- Bilder nur mit `next/image`, immer mit `sizes` und festem Seitenverhältnis; das erste sichtbare Bild bekommt `priority`. Alt-Text in Listen `""` (der Titel steht daneben), auf der Detailseite der Titel.
+- Saubere Struktur: Listen als `<ul>`/`<li>`, Karten als `<article>`, genau ein `<h1>` pro Seite, Überschriften ohne Lücke. Ort und Besitzer*in bekommen ein Label („Ort:“, „Verleiht:“), notfalls `sr-only`.
+- Jede Liste hat einen leeren Zustand: ein Satz und ein Link weiter. Meldungen sind ganze deutsche Sätze, die Oberfläche duzt.
+- Preise immer über `preisText()` aus `src/lib/format.ts`, Kategorien aus `kategorien` in `src/data/gegenstaende.ts`.
+- Kleiner Text (unter 14 px) nie in der Akzentfarbe auf hellem Grund. Den Fokus-Rahmen nie entfernen, nur ersetzen. Animationen nur mit `motion-safe:`.
+
 ## Projektstruktur
 
 - `src/app/` — Seiten und Routen (ein Ordner = eine URL)
 - `src/components/` — wiederverwendbare UI-Bausteine
 - `src/data/` — Beispieldaten
-- `src/lib/` — Hilfsfunktionen, Supabase-Client
+- `src/lib/` — Hilfsfunktionen (`format.ts`: Preise), später der Supabase-Client
 - `docs/PRODUKT.md` — Produkt-Brief, eine Seite (schreibt die Person mit dir gemeinsam: `/ndu-idee`, MVP aus `/ndu-brainstorm`). Lies ihn (falls vorhanden), bevor du ein Issue umsetzt. Er lebt: Stellt sich beim Bauen oder Testen eine Annahme daraus als falsch heraus, sag es und schlag die Änderung vor (inkl. Stand-Zeile).
 - `docs/BACKLOG.md` — Issues (Ziel, Nicht im Umfang, Akzeptanzkriterien, Fertig wenn), priorisiert
 - `docs/ENTSCHEIDUNGEN.md` — Entscheidungen, die du dir merken sollst (hier eintragen, wenn etwas festgelegt wird)

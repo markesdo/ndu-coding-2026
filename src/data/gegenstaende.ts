@@ -2,7 +2,8 @@
 // Ein Gegenstand ist absichtlich gerade verliehen (siehe Issue 1 im Backlog).
 // Die Bilder liegen in public/gegenstaende/.
 
-export type Kategorie = "Mode" | "Wohnen & Deko" | "Technik" | "Freizeit";
+export const kategorien = ["Mode", "Wohnen & Deko", "Technik", "Freizeit"] as const;
+export type Kategorie = (typeof kategorien)[number];
 
 export type Gegenstand = {
   id: string;

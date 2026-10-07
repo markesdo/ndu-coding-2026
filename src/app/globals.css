@@ -26,3 +26,19 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Sichtbarer Rahmen für alle, die mit der Tastatur navigieren. Nicht entfernen, nur ersetzen. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Wer in den Systemeinstellungen „Bewegung reduzieren“ gewählt hat, bekommt keine Animationen. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
