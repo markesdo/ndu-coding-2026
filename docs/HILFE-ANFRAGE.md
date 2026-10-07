@@ -5,9 +5,11 @@ Bevor du in Teams schreibst, probiere **eins nach dem anderen** – läuft es wi
 1. **Fehlermeldung komplett kopieren** (Browser-Konsole oder Terminal) und Claude geben: „Erkläre mir zuerst in einfachen Worten, was passiert ist. Dann schlag eine Lösung vor.“
 2. Neue Session: `/clear`, dann das Problem **kleiner** formulieren.
 3. `/ndu-check` ausführen.
-4. Gar nichts hilft? **Fragen oder verwerfen.** Willst du wissen, was schiefging: frag in Teams (unten) und verwirf noch nichts – sonst ist der Fehler weg. Willst du neu ansetzen: Source Control → „Discard Changes“ verwirft alles seit dem letzten Commit.
+4. Gar nichts hilft? **Entweder in Teams fragen** (so wie unten beschrieben) und vorher nichts verwerfen – sonst ist der Fehler weg. **Oder neu ansetzen:** Source Control → „Discard Changes“ verwirft alles seit dem letzten Commit. Das bringt dich nur zurück zu einem funktionierenden Stand, wenn du den kaputten noch nicht committet hast.
 
-Wenn das nicht hilft: **neuer Beitrag im Teams-Kanal 3-Coding**, Betreff beginnt mit **„Hilfe:“**, im Text **genau dieses Format** (kopieren & ausfüllen):
+## So fragst du in Teams
+
+**Neuer Beitrag im Teams-Kanal 3-Coding**, Betreff beginnt mit **„Hilfe:“**, im Text **genau dieses Format** (kopieren & ausfüllen):
 
 ```
 🔗 Repo: https://github.com/DEIN-NAME/DEIN-REPO
