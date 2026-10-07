@@ -1,0 +1,19 @@
+---
+description: Funktionen mit Claude durchdenken – Claude schlägt vor, auch Unerwartetes, du entscheidest; danach MVP im Brief und Issues im Backlog
+---
+
+Wir sammeln die Funktionen für unser Produkt. Grundlage ist `docs/PRODUKT.md`. Fehlt die Datei: Sag, dass zuerst `/ndu-idee` dran ist, und hör auf.
+
+**Ändere keine Datei, bevor ich in Schritt 4 ausdrücklich zugestimmt habe.** Lesen ist erlaubt.
+
+1. **Verstehen.** Lies `docs/PRODUKT.md` und `docs/BACKLOG.md`. Fass in 2–3 Sätzen zusammen, für wen das Produkt ist und welches Problem es löst.
+2. **Ideen, Runde für Runde.** Schlag pro Nachricht 3–5 Funktionen vor, jede in einem Satz mit ihrem Nutzen für die Person aus dem Brief. Mische Naheliegendes mit Ideen, auf die wir selbst wahrscheinlich nicht kommen: aus ähnlichen Produkten, aus anderen Bereichen, aus dem Alltag der Zielgruppe. Frag zu jeder: **MVP, Später oder Nein?** Frag nach, wenn eine Antwort unklar ist. Rüttelt eine Idee an einer Annahme im Brief (Zielgruppe, „macht NICHT“), sag es offen. Nach 2–3 Runden fragst du, ob wir weitermachen oder abschließen.
+3. **Schneiden.** Zeig die Liste in drei Teilen: MVP, Später, Nein. Das MVP ist höchstens 5 Funktionen groß – gerade so viel, dass eine echte Person das Produkt einmal sinnvoll benutzen kann. Ist es größer, schlag vor, was auf Später wandert. Frag, ob das so stimmt.
+4. **Erst nach meinem Okay schreiben:**
+   - `docs/PRODUKT.md`: Abschnitt 5 mit den MVP-Funktionen als Stichworte, darunter „Später:“ mit den übrigen Ideen. Stand-Zeile aktualisieren.
+   - `docs/BACKLOG.md`: pro MVP-Funktion ein Issue im Format der Datei: **Ziel** (was danach möglich ist, für wen und warum – „damit …“), **Nicht im Umfang**, **Akzeptanzkriterien** (3–5, „Gegeben … wenn … dann …“, mindestens ein Negativfall), **Fertig, wenn** (woran man es im Browser prüft); Status ⬜ offen. Issue 1 ist der kleinste Schritt, den man im Browser sehen kann. Jedes Kriterium muss im Browser prüfbar sein. Keine Satzform „Als … möchte ich …“.
+   - Steht im Backlog schon etwas **zu diesem Produkt**: nicht überschreiben. Zeig, welche Issues neu dazukämen oder sich ändern würden, und trag sie erst nach Okay ein.
+   - Stehen dort Issues **zu einem anderen Produkt** (z. B. Campus Events in einem neuen Repo): vorher fragen, ob sie ersetzt werden sollen. Wenn nicht: die neuen Issues **oben** unter einer eigenen Überschrift einfügen, mit eigenem Kürzel (z. B. L1, L2 … für „Lerngruppen“), damit sie sich nicht mit den alten verwechseln lassen.
+5. **Abschluss.** Sag in einem Satz, welches Issue als Erstes dran ist und mit welchem Satz ich es starte – mit der Nummer, die jetzt tatsächlich im Backlog steht (z. B. „Setze Issue 1 aus docs/BACKLOG.md um“). Bitte mich, Brief und Backlog kurz durchzulesen und dann selbst `/ndu-commit` einzugeben. Führ `/ndu-commit` nicht selbst aus.
+
+Sprache: Deutsch, einfache Worte, keine Fachbegriffe ohne kurze Erklärung.

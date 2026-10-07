@@ -1,19 +1,15 @@
 ---
-description: Von der Idee zu Produkt-Brief und Backlog – Claude fragt nach, schlägt Varianten vor und schreibt erst nach deinem Okay
+description: Von der Idee zum Produkt-Brief – kurzes Interview, dann eine Seite in docs/PRODUKT.md. Funktionen kommen danach mit /ndu-brainstorm
 argument-hint: [Idee in einem Satz, optional]
 ---
 
 Wir starten ein neues Produkt oder schärfen ein bestehendes. Die Idee: $ARGUMENTS (wenn leer: frag zuerst nach der Idee in einem Satz).
 
-**Ändere keine Datei, bevor ich in Schritt 4 ausdrücklich zugestimmt habe.** Lesen ist erlaubt.
+**Ändere keine Datei, bevor ich in Schritt 3 ausdrücklich zugestimmt habe.** Lesen ist erlaubt.
 
-1. **Verstehen.** Lies `docs/PRODUKT-VORLAGE.md`, `docs/BACKLOG.md` und, falls vorhanden, `docs/PRODUKT.md`. Stell mir dann Rückfragen entlang der Vorlage – **immer nur eine Frage pro Nachricht**, wenn möglich mit 2–4 Antwortmöglichkeiten zum Auswählen. Frag zuerst nach Zielgruppe und Problem, dann nach Abgrenzung (was das Produkt bewusst NICHT macht). Höchstens 8 Fragen; was du sinnvoll annehmen kannst, nimmst du an.
-2. **Varianten.** Schlag 2–3 Varianten für das MVP vor (z. B. schmal / mittel), je 2–3 Sätze mit Vor- und Nachteil, und empfiehl eine mit Begründung.
-3. **Zusammenfassung.** Fass in höchstens 10 Zeilen zusammen, was wir bauen. Trenne dabei, was ich gesagt habe, von dem, was du angenommen hast. Frag, ob das so stimmt.
-4. **Erst nach meinem Okay schreiben:**
-   - `docs/PRODUKT.md` nach der Vorlage, eine Seite: Stand-Zeile mit heutigem Datum, Abschnitt 4 (Abgrenzung) mit drei Punkten, Abschnitt 6 als „Wir glauben, dass … Wir merken es, wenn …“. Gibt es `docs/PRODUKT.md` schon **zu diesem Produkt**: nicht neu schreiben, sondern die Änderungen zeigen und erst nach Okay eintragen.
-   - `docs/BACKLOG.md` mit 5–8 Issues im Format der Datei: **Ziel** (was danach möglich ist, für wen und warum – „damit …“), **Nicht im Umfang**, **Akzeptanzkriterien** (3–5, „Gegeben … wenn … dann …“, mindestens ein Negativfall), **Fertig, wenn** (woran man es im Browser prüft); Status ⬜ offen. Issue 1 ist der kleinste Schritt, den man im Browser sehen kann. Jedes Kriterium muss im Browser prüfbar sein. Keine Satzform „Als … möchte ich …“.
-   - Stehen in `docs/BACKLOG.md` schon Issues **zu einem anderen Produkt** (z. B. Campus Events in einem neuen Repo): vorher fragen, ob sie ersetzt werden sollen. Wenn nicht: die neuen Issues **oben** unter einer eigenen Überschrift einfügen, mit eigenem Kürzel (z. B. L1, L2 … für „Lerngruppen“), damit sie sich nicht mit den alten verwechseln lassen. Gehören die Issues **zu diesem Produkt**: nicht überschreiben, sondern Änderungen vorschlagen und erst nach Okay eintragen.
-5. **Abschluss.** Sag in einem Satz, welches Issue als Erstes dran ist und mit welchem Satz ich es starte – mit der Nummer, die jetzt tatsächlich im Backlog steht (z. B. „Setze Issue 1 aus docs/BACKLOG.md um“). Bitte mich, Produkt-Brief und Backlog kurz durchzulesen und dann selbst `/ndu-commit` einzugeben. Führ `/ndu-commit` nicht selbst aus.
+1. **Kurzes Interview.** Lies `docs/PRODUKT-VORLAGE.md` und, falls vorhanden, `docs/PRODUKT.md`. Stell mir dann höchstens 5 Fragen – **immer nur eine pro Nachricht**, wenn möglich mit 2–4 Antwortmöglichkeiten zum Auswählen: Für wen (eine konkrete Person, nicht „alle“)? Welches Problem, und wie wird es heute gelöst? Was soll das Produkt bewusst NICHT machen? Woran merken wir, dass es funktioniert? Was du sinnvoll annehmen kannst, nimmst du an. Nach Funktionen fragst du noch nicht – die sammeln wir im nächsten Schritt mit `/ndu-brainstorm`.
+2. **Zusammenfassung.** Fass in höchstens 8 Zeilen zusammen, worum es geht. Trenne dabei, was ich gesagt habe, von dem, was du angenommen hast. Frag, ob das so stimmt.
+3. **Erst nach meinem Okay schreiben:** `docs/PRODUKT.md` nach der Vorlage, kurz: Stand-Zeile mit heutigem Datum, Abschnitte 1–4, Abschnitt 6 als „Wir glauben, dass … Wir merken es, wenn …“ und offene Fragen. In Abschnitt 5 (MVP) steht nur „kommt aus `/ndu-brainstorm`“. Gibt es `docs/PRODUKT.md` schon **zu diesem Produkt**: nicht neu schreiben, sondern die Änderungen zeigen und erst nach Okay eintragen. Den Backlog fasst du nicht an.
+4. **Abschluss.** Bitte mich, den Brief kurz zu lesen, und sag: Als Nächstes sammeln wir mit `/ndu-brainstorm` die Funktionen. Führ `/ndu-brainstorm` nicht selbst aus.
 
 Sprache: Deutsch, einfache Worte, keine Fachbegriffe ohne kurze Erklärung.

@@ -1,7 +1,7 @@
 # Produkt-Brief — [Produktname]
 
 > Eine Seite. Wird es länger, ist das Produkt für den Anfang zu groß.
-> Der Brief lebt: Nach jedem Test mit echten Menschen passt ihr ihn an. Erarbeitet ihn **mit Claude**: `/ndu-idee`.
+> Der Brief lebt: Nach jedem Test mit echten Menschen passt ihr ihn an. Erarbeitet ihn **mit Claude**: erst `/ndu-idee` (kurzes Interview), dann `/ndu-brainstorm` (Funktionen sammeln, MVP schneiden).
 > In Unternehmen heißt so ein Dokument oft PRD (Product Requirements Document) oder Spec.
 
 **Stand:** [Datum] — [was sich zuletzt geändert hat, ein Halbsatz]
@@ -20,7 +20,9 @@ Was ist heute mühsam, langsam oder frustrierend? Wie wird es heute gelöst (Wha
 Drei Dinge, die bewusst wegbleiben. Das ist der wichtigste Abschnitt.
 
 ## 5. Was gehört ins MVP? (3–5 Stichworte)
-Nur, was für den ersten nützlichen Durchlauf nötig ist. Jedes Stichwort wird ein Issue in `docs/BACKLOG.md` – Ziel, Grenzen und Akzeptanzkriterien stehen dort, nicht hier.
+Kommt aus dem Brainstorming mit Claude (`/ndu-brainstorm`). Nur, was für den ersten nützlichen Durchlauf nötig ist. Jedes Stichwort wird ein Issue in `docs/BACKLOG.md` – Ziel, Grenzen und Akzeptanzkriterien stehen dort, nicht hier.
+
+**Später:** Ideen aus dem Brainstorming, die warten.
 
 ## 6. Woran merken wir, dass es funktioniert?
 Wir glauben, dass [Zielgruppe] damit [Problem] löst.
