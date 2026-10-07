@@ -2,7 +2,7 @@
 
 > Ein Issue = ein Durchgang mit Claude. Oben steht, was als Nächstes dran ist.
 > Status: ⬜ offen · 🔧 in Arbeit · ✅ fertig (alle Kriterien im Browser geprüft)
-> Aufbau jedes Issues: **Ziel** (was danach möglich ist, für wen) · **Nicht im Umfang** · **Akzeptanzkriterien** (Gegeben … wenn … dann …) · **Fertig, wenn** (woran man es prüft).
+> Aufbau jedes Issues: **Ziel** (was danach möglich ist, für wen und warum – „damit …“) · **Nicht im Umfang** · **Akzeptanzkriterien** (Gegeben … wenn … dann …) · **Fertig, wenn** (woran man es prüft).
 
 ## Tag 1 — Übung 2: MVP ohne Datenbank
 
@@ -17,7 +17,7 @@
 **Fertig, wenn:** Startseite im Browser und in Handybreite geprüft; das vergangene „Erstsemester-Frühstück“ fehlt.
 
 ### ⬜ Issue 2 — Event-Detailseite
-**Ziel:** Ein Klick auf ein Event zeigt Beschreibung und alle Details auf einer eigenen Seite.
+**Ziel:** Ein Klick auf ein Event zeigt Beschreibung und alle Details auf einer eigenen Seite – damit Studierende entscheiden können, ob sie hingehen.
 **Nicht im Umfang:** Zusagen, Bearbeiten, Teilen.
 **Akzeptanzkriterien:**
 - Gegeben ich klicke auf ein Event in der Liste, dann öffnet sich eine eigene Seite (eigene URL) mit allen Infos.
@@ -27,7 +27,7 @@
 **Fertig, wenn:** zwei Events angeklickt, Adresse kopiert und in neuem Tab geöffnet, zurück zur Liste; eine erfundene Event-Adresse aufgerufen und die Meldung gesehen.
 
 ### ⬜ Issue 3 — Nach Kategorie filtern
-**Ziel:** Studierende filtern die Liste nach Kategorie (Lernen, Party, Sport, Vortrag) und finden schneller, was sie interessiert.
+**Ziel:** Studierende filtern die Liste nach Kategorie (Lernen, Party, Sport, Vortrag) – damit sie schneller finden, was sie interessiert.
 **Nicht im Umfang:** Freitextsuche, mehrere Kategorien gleichzeitig.
 **Akzeptanzkriterien:**
 - Gegeben ich klicke auf „Sport“, dann sehe ich nur Sport-Events und der Filter ist sichtbar aktiv.
@@ -39,7 +39,7 @@
 ## Tag 2 — Übung 3: Echte Daten (Supabase)
 
 ### ⬜ Issue 4 — Event anlegen
-**Ziel:** Organisator*innen legen ein Event an, und es erscheint dauerhaft in der Liste.
+**Ziel:** Organisator*innen legen ein Event an, und es erscheint dauerhaft in der Liste – damit die App echte Events zeigt statt Beispieldaten.
 **Nicht im Umfang:** Bearbeiten, Löschen, Bilder.
 **Akzeptanzkriterien:**
 - Gegeben ich fülle Titel, Datum, Uhrzeit, Ort, Kategorie, Beschreibung aus und speichere, dann erscheint das Event in der Liste und ist nach Reload noch da (Datenbank!).
@@ -83,7 +83,7 @@
 ## Optional (Tag 2, wer schnell ist) — KI als Feature
 
 ### ⬜ Issue 8 — Beschreibung vorschlagen lassen
-**Ziel:** Organisator*innen lassen sich aus Titel, Kategorie und Ort eine Eventbeschreibung vorschlagen – und legen Events schneller an.
+**Ziel:** Organisator*innen lassen sich aus Titel, Kategorie und Ort eine Eventbeschreibung vorschlagen – damit sie Events schneller anlegen.
 **Nicht im Umfang:** Bilder generieren, Übersetzungen, automatisches Speichern des Vorschlags.
 **Akzeptanzkriterien:**
 - Gegeben ich habe Titel, Kategorie und Ort ausgefüllt, wenn ich auf „Beschreibung vorschlagen“ klicke, dann erscheint nach wenigen Sekunden ein Vorschlag (2–3 Sätze, Deutsch) im Beschreibungsfeld, den ich bearbeiten kann.
