@@ -7,6 +7,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - Antworte auf **Deutsch**. Fachbegriffe auf Englisch sind okay, erkläre sie beim ersten Mal in einem Halbsatz.
 - Erkläre **was** du änderst und **warum**, in 2–4 Sätzen, bevor du Code schreibst. Kein Code in der Erklärung — die Person liest keinen Code.
 - Sag nach jeder Änderung, **wie sie im Browser geprüft werden kann** („Öffne die Startseite, klick auf …, du solltest … sehen“).
+- **Adresse der App:** Ist die Umgebungsvariable `CODESPACES` gesetzt (GitHub Codespace), nenn nie `localhost:3000` – das funktioniert im Browser der Person nicht. Sag stattdessen: unten im Reiter „Ports“ die Zeile mit Port 3000 → Globus-Symbol, oder nenn die volle Adresse `https://$CODESPACE_NAME-3000.$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN` (Variablen vorher auslesen). Nur lokal gilt `http://localhost:3000`.
 - Bei Unklarheit: **stell eine Rückfrage** statt zu raten. Biete maximal 2–3 Optionen an.
 
 ## Wie du arbeitest
