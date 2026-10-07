@@ -1,4 +1,4 @@
-# Campus Events — NDU Coding 2026
+# Leihbar — NDU Coding 2026
 
 Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by Innovation) **ohne Programmiererfahrung**. Du bist das Entwicklungsteam, die Person ist Product Owner. Alles, was du tust, muss für sie nachvollziehbar und im Browser überprüfbar sein.
 
@@ -29,14 +29,25 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - Aktuelle Doku: Bei Fragen zu Bibliotheken (Supabase, Tailwind, Lucide …) nutze **Context7** statt deines Trainingswissens – mit Library-ID, wenn du sie kennst (z. B. `/supabase/supabase`), eine Frage pro Abfrage, passend zur Version in `package.json`. Ausnahme Next.js: Die passende Doku liegt in `node_modules/next/dist/docs/` (siehe `AGENTS.md`).
 - Icons: **Lucide** (`lucide-react`, schon installiert), keine Emojis in der Oberfläche. Dekorative Icons brauchen nichts; ein Icon ohne Text daneben (z. B. ein Button nur mit Icon) bekommt ein `aria-label`.
 - Deployment: Vercel
-- Beispieldaten liegen in `src/data/events.ts`, bis die Datenbank angebunden ist.
+- Beispieldaten liegen in `src/data/gegenstaende.ts` (Bilder in `public/gegenstaende/`), bis die Datenbank angebunden ist.
+
+## UI-Regeln (gelten für jedes Issue)
+
+- **Mobil zuerst:** jede Seite auch bei 375 px prüfen – nichts ragt über den Rand, der Header bleibt einzeilig.
+- Antippbare Elemente (Buttons, Links außerhalb von Fließtext, Filter) sind mindestens 44 px hoch (`min-h-11`). Die wichtigste Aktion einer Seite ist am Handy ohne Scrollen erreichbar.
+- Header und Footer liegen in `src/app/layout.tsx`, nicht in den einzelnen Seiten. Seitentitel über `metadata`/`generateMetadata` – die Vorlage „%s – Leihbar“ ist gesetzt.
+- Bilder nur mit `next/image`, immer mit `sizes` und festem Seitenverhältnis; das erste sichtbare Bild bekommt `priority`. Alt-Text in Listen `""` (der Titel steht daneben), auf der Detailseite der Titel.
+- Saubere Struktur: Listen als `<ul>`/`<li>`, Karten als `<article>`, genau ein `<h1>` pro Seite, Überschriften ohne Lücke. Ort und Besitzer*in bekommen ein Label („Ort:“, „Verleiht:“), notfalls `sr-only`.
+- Jede Liste hat einen leeren Zustand: ein Satz und ein Link weiter. Meldungen sind ganze deutsche Sätze, die Oberfläche duzt.
+- Preise immer über `preisText()` aus `src/lib/format.ts`, Kategorien aus `kategorien` in `src/data/gegenstaende.ts`.
+- Kleiner Text (unter 14 px) nie in der Akzentfarbe auf hellem Grund. Den Fokus-Rahmen nie entfernen, nur ersetzen. „Bewegung reduzieren“ regelt `globals.css` für alle Animationen.
 
 ## Projektstruktur
 
 - `src/app/` — Seiten und Routen (ein Ordner = eine URL)
 - `src/components/` — wiederverwendbare UI-Bausteine
 - `src/data/` — Beispieldaten
-- `src/lib/` — Hilfsfunktionen, Supabase-Client
+- `src/lib/` — Hilfsfunktionen (`format.ts`: Preise), später der Supabase-Client
 - `docs/PRODUKT.md` — Produkt-Brief, eine Seite (schreibt die Person mit dir gemeinsam: `/ndu-idee`, MVP aus `/ndu-brainstorm`). Lies ihn (falls vorhanden), bevor du ein Issue umsetzt. Er lebt: Stellt sich beim Bauen oder Testen eine Annahme daraus als falsch heraus, sag es und schlag die Änderung vor (inkl. Stand-Zeile).
 - `docs/BACKLOG.md` — Issues (Ziel, Nicht im Umfang, Akzeptanzkriterien, Fertig wenn), priorisiert
 - `docs/ENTSCHEIDUNGEN.md` — Entscheidungen, die du dir merken sollst (hier eintragen, wenn etwas festgelegt wird)
