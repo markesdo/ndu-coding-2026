@@ -1,4 +1,4 @@
-# Campus Events — NDU Coding 2026
+# Leihbar — NDU Coding 2026
 
 Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by Innovation) **ohne Programmiererfahrung**. Du bist das Entwicklungsteam, die Person ist Product Owner. Alles, was du tust, muss für sie nachvollziehbar und im Browser überprüfbar sein.
 
@@ -29,7 +29,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - Aktuelle Doku: Bei Fragen zu Bibliotheken (Supabase, Tailwind, Lucide …) nutze **Context7** statt deines Trainingswissens – mit Library-ID, wenn du sie kennst (z. B. `/supabase/supabase`), eine Frage pro Abfrage, passend zur Version in `package.json`. Ausnahme Next.js: Die passende Doku liegt in `node_modules/next/dist/docs/` (siehe `AGENTS.md`).
 - Icons: **Lucide** (`lucide-react`, schon installiert), keine Emojis in der Oberfläche. Dekorative Icons brauchen nichts; ein Icon ohne Text daneben (z. B. ein Button nur mit Icon) bekommt ein `aria-label`.
 - Deployment: Vercel
-- Beispieldaten liegen in `src/data/events.ts`, bis die Datenbank angebunden ist.
+- Beispieldaten liegen in `src/data/gegenstaende.ts` (Bilder in `public/gegenstaende/`), bis die Datenbank angebunden ist.
 
 ## Projektstruktur
 

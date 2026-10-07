@@ -8,13 +8,13 @@
 
 ## 1. Für wen?
 Eine konkrete Person, nicht „alle Studierenden“.
-*Beispiel: Lena, 24, organisiert für ihre Studiengruppe wöchentliche Lernsessions und zwei Partys pro Semester.*
+*Beispiel: Mara, 23, studiert in St. Pölten und braucht ab und zu Dinge, die sich nicht zu kaufen lohnen – ein Abendkleid für den Ball, einen Akkuschrauber fürs WG-Regal.*
 
 ## 2. Welches Problem?
 Was ist heute mühsam, langsam oder frustrierend? Wie wird es heute gelöst (WhatsApp, E-Mail, Zettel …)?
 
 ## 3. Was ist das Produkt in einem Satz?
-*Beispiel: Eine Web-App, in der Studierende Events anlegen und andere mit einem Klick zusagen.*
+*Beispiel: Eine Web-App, in der Studierende Dinge zum Ausleihen anbieten und andere sie mit einem Klick anfragen.*
 
 ## 4. Was macht es NICHT?
 Drei Dinge, die bewusst wegbleiben. Das ist der wichtigste Abschnitt.
@@ -27,7 +27,7 @@ Kommt aus dem Brainstorming mit Claude (`/ndu-brainstorm`). Nur, was für den er
 ## 6. Woran merken wir, dass es funktioniert?
 Wir glauben, dass [Zielgruppe] damit [Problem] löst.
 Wir merken es, wenn [messbar, mit 3–5 Menschen].
-*Beispiel: Wir merken es, wenn 5 Kommiliton\*innen ohne Erklärung ein Event anlegen und zusagen.*
+*Beispiel: Wir merken es, wenn 5 Kommiliton\*innen ohne Erklärung einen Gegenstand anbieten und einen anfragen.*
 
 ## 7. Offene Fragen
 Was wissen wir noch nicht? Was hat der letzte Test offen gelassen?

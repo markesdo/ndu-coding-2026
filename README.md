@@ -1,4 +1,4 @@
-# Campus Events — NDU Coding 2026
+# Leihbar — NDU Coding 2026
 
 Dein Startpunkt für den Kurs **„Programmieren mit AI“** (MSc Management by Innovation, NDU).
 Du musst **nichts installieren.** Alles läuft im Browser.
@@ -6,7 +6,7 @@ Lokal auf dem eigenen Laptop arbeiten statt im Codespace (ab Tag 2): Anleitung u
 
 ## In 5 Schritten zur laufenden App
 
-1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: `campus-events`, Owner: dein GitHub-Account, Public. → „Create repository“.
+1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: `leihbar`, Owner: dein GitHub-Account, Public. → „Create repository“.
 2. **Codespace starten:** in deinem neuen Repo auf den grünen Button **„Code“ → Tab „Codespaces“ → „Create codespace on main“**. Das dauert beim ersten Mal 2–4 Minuten. Du landest in VS Code im Browser.
 3. **Claude Code anmelden:** unten im **Terminal** eintippen:
    ```
@@ -28,7 +28,7 @@ Lokal auf dem eigenen Laptop arbeiten statt im Codespace (ab Tag 2): Anleitung u
 |---|---|
 | `src/app/` | Die Seiten der App (eine Mappe = eine URL) |
 | `src/components/` | Wiederverwendbare UI-Bausteine |
-| `src/data/events.ts` | Beispiel-Events, bis die Datenbank kommt (Tag 2) |
+| `src/data/gegenstaende.ts` | Beispiel-Gegenstände, bis die Datenbank kommt (Tag 2); Bilder in `public/gegenstaende/` |
 | `docs/PRODUKT-VORLAGE.md` | Vorlage für deinen Produkt-Brief (eine Seite, lebt mit dem Produkt) |
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |

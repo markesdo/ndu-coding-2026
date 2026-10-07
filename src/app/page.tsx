@@ -1,10 +1,10 @@
 import Header from "@/components/Header";
-import { BellRing, CalendarDays, Hand } from "lucide-react";
+import { Hand, Recycle, Search } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
-import { events } from "@/data/events";
+import { gegenstaende } from "@/data/gegenstaende";
 
 export default function Home() {
-  const anzahl = events.length;
+  const anzahl = gegenstaende.length;
 
   return (
     <>
@@ -15,57 +15,57 @@ export default function Home() {
             NDU · Wintersemester 2026
           </p>
           <h1 className="mb-4 max-w-2xl text-4xl font-bold leading-tight sm:text-5xl">
-            Was ist los am Campus?
+            Leihen statt kaufen.
           </h1>
           <p className="mb-8 max-w-xl text-lg text-muted">
-            Lernsessions, Partys, Sport, Vorträge – alles an einem Ort statt in
-            fünf WhatsApp-Gruppen. Anlegen, finden, zusagen.
+            Abendkleid für den Ball, Akkuschrauber fürs WG-Regal, Zelt fürs
+            Festival – am Campus hat es schon jemand. Anbieten, finden, anfragen.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href="#events"
+              href="#gegenstaende"
               className="rounded-xl bg-accent px-5 py-3 font-medium text-white shadow-sm transition hover:opacity-90"
             >
-              Events ansehen
+              Gegenstände ansehen
             </a>
             <span className="rounded-xl border border-border px-5 py-3 text-muted">
-              Event anlegen – kommt an Tag 2
+              Anbieten – kommt an Tag 2
             </span>
           </div>
         </section>
 
         <section className="mb-14 grid gap-4 sm:grid-cols-3">
           <FeatureCard
-            icon={CalendarDays}
-            titel="Alles auf einen Blick"
-            text="Alle Events deines Studiengangs chronologisch – ohne Scrollen durch Chats."
+            icon={Search}
+            titel="Alles an einem Ort"
+            text="Was andere am Campus verleihen – von Mode über Möbel bis Technik, ohne Herumfragen in Chats."
           />
           <FeatureCard
             icon={Hand}
-            titel="Mit einem Klick zusagen"
-            text="Organisator*innen sehen sofort, wie viele kommen. Kein Nachfragen mehr."
+            titel="Mit einem Klick anfragen"
+            text="Besitzer*innen sehen sofort, wer etwas ausleihen möchte. Kein Hin und Her mehr."
           />
           <FeatureCard
-            icon={BellRing}
-            titel="Nichts mehr verpassen"
-            text="Erinnerung am Vortag. Für die Dinge, die man sich fest vorgenommen hat."
+            icon={Recycle}
+            titel="Leihen statt kaufen"
+            text="Für einmal kaufen lohnt sich selten. Leihen spart Geld und Platz in der WG."
           />
         </section>
 
         <section
-          id="events"
+          id="gegenstaende"
           className="rounded-2xl border border-dashed border-border bg-card p-8 text-center"
         >
-          <h2 className="mb-2 text-xl font-semibold">Hier kommt die Eventliste hin</h2>
+          <h2 className="mb-2 text-xl font-semibold">Hier kommt die Liste hin</h2>
           <p className="mx-auto max-w-md text-sm text-muted">
-            In <code className="rounded bg-accent-soft px-1">src/data/events.ts</code>{" "}
-            warten bereits {anzahl} Beispiel-Events. Dein erstes Issue (Issue 1 im
-            Backlog) bringt sie auf diese Seite.
+            In <code className="rounded bg-accent-soft px-1">src/data/gegenstaende.ts</code>{" "}
+            warten bereits {anzahl} Beispiel-Gegenstände. Dein erstes Issue (Issue 1
+            im Backlog) bringt sie auf diese Seite.
           </p>
         </section>
       </main>
       <footer className="border-t border-border py-6 text-center text-xs text-muted">
-        Campus Events · gebaut im Kurs „Programmieren mit AI“ · NDU 2026
+        Leihbar · gebaut im Kurs „Programmieren mit AI“ · NDU 2026
       </footer>
     </>
   );

@@ -14,7 +14,7 @@
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
-      "label": "Campus Events (npm run dev)",
+      "label": "Leihbar (npm run dev)",
       "onAutoForward": "openPreview"
     }
   },
