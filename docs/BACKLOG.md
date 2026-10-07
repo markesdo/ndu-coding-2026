@@ -33,7 +33,6 @@
 - Gegeben ich klicke auf „Mode“, dann sehe ich nur Mode und der Filter ist sichtbar aktiv.
 - Gegeben ich klicke auf „Alle“, dann sehe ich wieder alle Gegenstände.
 - Gegeben ich habe „Mode“ gewählt, wenn ich danach „Technik“ wähle, dann sehe ich nur Technik (Filter addieren sich nicht).
-- Gegeben in einer Kategorie gibt es nichts, dann sehe ich einen Hinweis mit Link zu allen Gegenständen statt einer leeren Fläche.
 
 **Fertig, wenn:** jede Kategorie einmal angeklickt, zweimal hintereinander gewechselt, auch am Handy.
 

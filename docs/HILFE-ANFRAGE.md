@@ -13,7 +13,7 @@ Bevor du in Teams schreibst, probiere **eins nach dem anderen** – läuft es wi
 
 ```
 🔗 Repo: https://github.com/DEIN-NAME/DEIN-REPO
-🎯 Ich wollte: (ein Satz, z. B. „RSVP-Button einbauen“)
+🎯 Ich wollte: (ein Satz, z. B. „Anfrage-Button einbauen“)
 💥 Was passiert ist: (was du siehst — Fehlermeldung als TEXT, kein Screenshot der Meldung)
 🔁 Was ich schon probiert habe: (1–3 Punkte)
 📍 Wo: (Browser-Konsole / Terminal / Seite XY)

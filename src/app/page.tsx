@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 py-12 sm:block">
       <section className="mb-14">
-        <p className="mb-3 inline-block rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent">
+        <p className="mb-3 inline-block rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-foreground">
           NDU · Wintersemester 2026
         </p>
         <h1 className="mb-4 max-w-2xl text-4xl font-bold leading-tight sm:text-5xl">

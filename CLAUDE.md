@@ -40,7 +40,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - Saubere Struktur: Listen als `<ul>`/`<li>`, Karten als `<article>`, genau ein `<h1>` pro Seite, Überschriften ohne Lücke. Ort und Besitzer*in bekommen ein Label („Ort:“, „Verleiht:“), notfalls `sr-only`.
 - Jede Liste hat einen leeren Zustand: ein Satz und ein Link weiter. Meldungen sind ganze deutsche Sätze, die Oberfläche duzt.
 - Preise immer über `preisText()` aus `src/lib/format.ts`, Kategorien aus `kategorien` in `src/data/gegenstaende.ts`.
-- Kleiner Text (unter 14 px) nie in der Akzentfarbe auf hellem Grund. Den Fokus-Rahmen nie entfernen, nur ersetzen. Animationen nur mit `motion-safe:`.
+- Kleiner Text (unter 14 px) nie in der Akzentfarbe auf hellem Grund. Den Fokus-Rahmen nie entfernen, nur ersetzen. „Bewegung reduzieren“ regelt `globals.css` für alle Animationen.
 
 ## Projektstruktur
 
