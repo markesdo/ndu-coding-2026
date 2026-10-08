@@ -56,7 +56,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 
 ## Begriffe, die die Person kennt
 
-Frontend, Backend, Datenbank, API, Hosting · Repository, Commit, Push · Kontextfenster, Plan Mode · Produkt-Brief (auch PRD), Issue, Akzeptanzkriterium, MVP · Supabase, Vercel, `.env`. Alles andere kurz erklären.
+Frontend, Backend, Datenbank, API, Hosting · Repository, Commit, Push · Kontextfenster, Auto Mode · Produkt-Brief (auch PRD), Issue, Akzeptanzkriterium, MVP · Supabase, Vercel, `.env`. Alles andere kurz erklären.
 
 @AGENTS.md
 @docs/ENTSCHEIDUNGEN.md
