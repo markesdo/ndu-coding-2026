@@ -16,7 +16,8 @@ GH_VERSION=2.102.0
 PLUGINS=(frontend-design superpowers vercel playwright)
 # Für Tests überschreibbar.
 APPS_DIR="${NDU_APPS_DIR:-/Applications}"
-REPO_DIR_BASE="${NDU_REPO_DIR:-$HOME/Documents}"
+# Nicht ~/Documents: Das synchronisiert iCloud oft – bei node_modules langsam und fehleranfällig.
+REPO_DIR_BASE="${NDU_REPO_DIR:-$HOME/code}"
 REPO_NAME="${1:-}"
 
 schritt() { printf '\n\033[1;34m==> %s\033[0m\n' "$*"; }
@@ -60,12 +61,14 @@ CODE_BIN="$APPS_DIR/Visual Studio Code.app/Contents/Resources/app/bin"
 [ -d "$HOME/Applications/Visual Studio Code.app" ] && [ ! -d "$APPS_DIR/Visual Studio Code.app" ] && CODE_BIN="$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 PFAD_ZEILE="export PATH=\"\$HOME/.local/bin:\$HOME/.local/node/bin:\$HOME/.local/gh/bin:$CODE_BIN:\$PATH\"  # NDU-Kurs"
 export PATH="$HOME/.local/bin:$HOME/.local/node/bin:$HOME/.local/gh/bin:$CODE_BIN:$PATH"
-touch "$HOME/.zshrc"
-if grep -qF '# NDU-Kurs' "$HOME/.zshrc"; then
-  ok "~/.zshrc schon eingerichtet"
+PROFILE="$HOME/.zshrc"
+case "${SHELL:-}" in */bash) PROFILE="$HOME/.bash_profile" ;; esac
+touch "$PROFILE"
+if grep -qF '# NDU-Kurs' "$PROFILE"; then
+  ok "${PROFILE/#$HOME/~} schon eingerichtet"
 else
-  printf '\n%s\n' "$PFAD_ZEILE" >> "$HOME/.zshrc"
-  ok "~/.zshrc ergänzt"
+  printf '\n%s\n' "$PFAD_ZEILE" >> "$PROFILE"
+  ok "${PROFILE/#$HOME/~} ergänzt"
 fi
 
 # ---------------------------------------------------------------------------
@@ -96,7 +99,7 @@ else
   CODE_BIN="$ziel/Visual Studio Code.app/Contents/Resources/app/bin"
   export PATH="$CODE_BIN:$PATH"
   if [ "$ziel" != "$APPS_DIR" ]; then
-    sed -i '' "s#$APPS_DIR/Visual Studio Code.app#$ziel/Visual Studio Code.app#" "$HOME/.zshrc"
+    sed -i '' "/# NDU-Kurs\$/s#:$APPS_DIR/Visual Studio Code.app#:$ziel/Visual Studio Code.app#" "$PROFILE"
   fi
   ok "installiert in $ziel"
 fi
@@ -113,7 +116,7 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-schritt "6/10 GitHub-CLI und Anmeldung"
+schritt "6/10 GitHub-CLI"
 if command -v gh >/dev/null 2>&1; then
   ok "gh schon da"
 else
@@ -126,17 +129,8 @@ else
   hash -r
   ok "gh installiert"
 fi
-if gh auth status --hostname github.com >/dev/null 2>&1; then
-  ok "bei GitHub angemeldet als $(gh api user -q .login)"
-else
-  hinweis "GitHub-Anmeldung: Fragen mit Enter bestätigen. Der Code liegt schon in der Zwischenablage –"
-  hinweis "im Browser mit ⌘V einfügen, „Continue“, dann „Authorize github“."
-  gh auth login --hostname github.com --git-protocol https --web
-fi
-LOGIN=$(gh api user -q .login)
-
 # ---------------------------------------------------------------------------
-schritt "7/10 Warten auf die Apple-Entwicklerwerkzeuge"
+schritt "7/10 Warten auf die Apple-Entwicklerwerkzeuge, dann GitHub-Anmeldung"
 if xcode-select -p >/dev/null 2>&1; then
   ok "fertig"
 else
@@ -151,13 +145,25 @@ else
 fi
 if "$CLT_GESTARTET"; then hinweis "Falls das Apple-Fenster noch offen ist: „Fertig“ klicken."; fi
 
+# Erst jetzt: gh richtet bei der Anmeldung Git ein, und Git gibt es erst mit den Apple-Werkzeugen.
+if gh auth status --hostname github.com >/dev/null 2>&1; then
+  ok "bei GitHub angemeldet als $(gh api user -q .login)"
+else
+  hinweis "GitHub-Anmeldung: Fragen mit Enter bestätigen. Der Code liegt schon in der Zwischenablage –"
+  hinweis "im Browser mit ⌘V einfügen (sonst abtippen), „Continue“, dann „Authorize github“."
+  gh auth login --hostname github.com --git-protocol https --web
+fi
+LOGIN=$(gh api user -q .login)
+
 # Git über die GitHub-Anmeldung, auch im normalen Terminal.
 gh auth setup-git --hostname github.com
 # Name und E-Mail wie im Codespace: GitHub-Name und noreply-Adresse, nur wenn noch nicht gesetzt.
-if [ -z "$(git config --global --get user.name || true)" ]; then
+aktuell=$(git config --global --get user.name || true)
+if [ -z "$aktuell" ] || [ "$aktuell" = GitHub ]; then
   name=$(gh api user -q '.name // empty'); git config --global user.name "${name:-$LOGIN}"
 fi
-if [ -z "$(git config --global --get user.email || true)" ]; then
+aktuell=$(git config --global --get user.email || true)
+if [ -z "$aktuell" ] || [ "$aktuell" = noreply@github.com ]; then
   git config --global user.email "$(gh api user -q .id)+$LOGIN@users.noreply.github.com"
 fi
 [ -z "$(git config --global --get pull.rebase || true)" ] && git config --global pull.rebase false
@@ -171,7 +177,9 @@ if [ -z "$REPO_NAME" ]; then
   else
     hinweis "Deine Repos:"
     gh repo list "$LOGIN" --limit 15 --json name -q '.[].name' | sed 's/^/      /'
-    read -r -p "    Name des Kurs-Repos: " REPO_NAME </dev/tty
+    until [ -n "$REPO_NAME" ] && gh repo view "$LOGIN/$REPO_NAME" >/dev/null 2>&1; do
+      read -r -p "    Name des Kurs-Repos: " REPO_NAME </dev/tty
+    done
   fi
 fi
 DIR="$REPO_DIR_BASE/$REPO_NAME"
