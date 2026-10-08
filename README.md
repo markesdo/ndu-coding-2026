@@ -3,6 +3,11 @@
 Dein Startpunkt für den Kurs **„Programmieren mit AI“** (MSc Management by Innovation, NDU).
 Du musst **nichts installieren.** Alles läuft im Browser.
 Lokal auf dem eigenen Laptop arbeiten statt im Codespace (ab Tag 2): Anleitung unter [Setup → Lokal](https://ndu.datamonkeys.ai/setup#lokal).
+Am Mac geht das mit einem Befehl im Terminal – was er tut, steht in [`setup-mac.sh`](setup-mac.sh):
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026/main/setup-mac.sh)"
+```
 
 ## In 5 Schritten zur laufenden App
 
