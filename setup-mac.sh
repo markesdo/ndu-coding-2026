@@ -24,6 +24,21 @@ schritt() { printf '\n\033[1;34m==> %s\033[0m\n' "$*"; }
 ok() { printf '    \033[32m✓\033[0m %s\n' "$*"; }
 hinweis() { printf '    \033[33m→\033[0m %s\n' "$*"; }
 abbruch() { printf '\n\033[1;31m✗ %s\033[0m\n' "$*" >&2; exit 1; }
+# Repo-Name aus der Eingabe: nimmt auch eingefügte Adressen an – https://github.com/<login>/<name>(.git)(/tree/…)(?…),
+# git@github.com:<login>/<name>.git, <login>/<name>. Leerzeichen im Namen werden wie bei GitHub zu „-“.
+# Eine Adresse ohne Repo-Teil (nur das Profil) ergibt nichts – sonst würde das Profil-Repo <login>/<login> geklont.
+repo_aus_eingabe() {
+  local s
+  s=$(printf '%s' "$1" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//; s/[?#].*$//')
+  case "$s" in
+    *github.com*) s=$(printf '%s' "$s" | sed -E 's#^git@github\.com:##; s#^(https?://)?(www\.)?github\.com/##')
+                  case "$s" in */?*) s=${s#*/} ;; *) s= ;; esac ;;
+    */?*) s=${s#*/} ;;
+  esac
+  s=${s%%/*}
+  s=${s%.git}
+  printf '%s' "$s" | sed -E 's/[[:space:]]+/-/g'
+}
 
 [ "$(uname -s)" = Darwin ] || abbruch "Dieses Skript ist nur für macOS."
 [ "$(id -u)" -ne 0 ] || abbruch "Bitte ohne sudo starten."
@@ -171,18 +186,18 @@ ok "Git: $(git config --global user.name) <$(git config --global user.email)>"
 
 # ---------------------------------------------------------------------------
 schritt "8/10 Repo holen"
+REPO_NAME=$(repo_aus_eingabe "$REPO_NAME")
 if [ -z "$REPO_NAME" ]; then
   if gh repo view "$LOGIN/leihbar" >/dev/null 2>&1; then
     REPO_NAME=leihbar
   else
-    hinweis "Deine Repos:"
+    hinweis "Deine Repos (die letzten 15):"
     gh repo list "$LOGIN" --limit 15 --json name -q '.[].name' | sed 's/^/      /'
-    hinweis "Wie heißt deine Kopie der Kursvorlage (Setup Schritt 1)? Nur den Namen aus der Liste, ohne $LOGIN/ davor – z. B.: leihbar"
+    hinweis "Wie heißt deine Kopie der Kursvorlage (Kurs-Website, Setup Schritt 1)? Nur den Namen, ohne $LOGIN/ davor – z. B.: leihbar"
     until [ -n "$REPO_NAME" ] && gh repo view "$LOGIN/$REPO_NAME" >/dev/null 2>&1; do
-      [ -n "$REPO_NAME" ] && hinweis "„$REPO_NAME“ gibt es unter $LOGIN nicht – bitte genau einen Namen aus der Liste oben."
-      read -r -p "    Name des Kurs-Repos (z. B. leihbar): " REPO_NAME </dev/tty
-      # Auch eingefügte Adressen annehmen: https://github.com/<login>/<name>(.git), <login>/<name>, Leerzeichen.
-      REPO_NAME=$(printf '%s' "$REPO_NAME" | tr -d '[:space:]' | sed -E 's#/+$##; s#\.git$##; s#.*/##')
+      [ -n "$REPO_NAME" ] && hinweis "„$REPO_NAME“ nicht gefunden unter github.com/$LOGIN – Namen dort prüfen (oder Internet). Abbrechen mit ctrl C."
+      read -r -p "    Name des Kurs-Repos (z. B. leihbar): " eingabe </dev/tty
+      REPO_NAME=$(repo_aus_eingabe "$eingabe")
     done
   fi
 fi
