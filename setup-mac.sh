@@ -177,8 +177,12 @@ if [ -z "$REPO_NAME" ]; then
   else
     hinweis "Deine Repos:"
     gh repo list "$LOGIN" --limit 15 --json name -q '.[].name' | sed 's/^/      /'
+    hinweis "Wie heißt deine Kopie der Kursvorlage (Setup Schritt 1)? Nur den Namen aus der Liste, ohne $LOGIN/ davor – z. B.: leihbar"
     until [ -n "$REPO_NAME" ] && gh repo view "$LOGIN/$REPO_NAME" >/dev/null 2>&1; do
-      read -r -p "    Name des Kurs-Repos: " REPO_NAME </dev/tty
+      [ -n "$REPO_NAME" ] && hinweis "„$REPO_NAME“ gibt es unter $LOGIN nicht – bitte genau einen Namen aus der Liste oben."
+      read -r -p "    Name des Kurs-Repos (z. B. leihbar): " REPO_NAME </dev/tty
+      # Auch eingefügte Adressen annehmen: https://github.com/<login>/<name>(.git), <login>/<name>, Leerzeichen.
+      REPO_NAME=$(printf '%s' "$REPO_NAME" | tr -d '[:space:]' | sed -E 's#/+$##; s#\.git$##; s#.*/##')
     done
   fi
 fi
