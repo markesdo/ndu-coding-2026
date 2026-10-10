@@ -38,7 +38,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
-| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
+| `.claude/commands/` | Eigene Befehle: `/ndu-neu`, `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
 | `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
 
 ## Die wichtigsten Befehle
@@ -47,6 +47,7 @@ Diese Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu diesem
 
 | Befehl | Wann |
 |---|---|
+| `/ndu-neu` | Du hast ein neues Repo aus der Vorlage angelegt und baust etwas anderes als Leihbar: Claude räumt Leihbar weg und setzt deinen Produktnamen ein |
 | `/ndu-idee` | Du startest ein neues Produkt: kurzes Interview, dann schreibt Claude den Produkt-Brief |
 | `/ndu-brainstorm` | Nach dem Brief: Claude schlägt Funktionen vor – auch solche, an die du nicht gedacht hast –, du entscheidest MVP / Später / Nein, dann schreibt Claude den Backlog |
 | `/ndu-explain` | Du willst verstehen, was gerade im Projekt passiert |
