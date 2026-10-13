@@ -246,6 +246,9 @@ claude plugin marketplace add anthropics/claude-plugins-official >/dev/null 2>&1
 for p in "${PLUGINS[@]}"; do
   if claude plugin install "$p@claude-plugins-official" >/dev/null 2>&1; then ok "Plugin $p"; else hinweis "Plugin $p nicht installiert – später in Claude: /plugin install $p@claude-plugins-official"; fi
 done
+# Kurs-Plugin mit den /ndu-Befehlen (aktualisieren: claude plugin marketplace update ndu-kurs && claude plugin update ndu@ndu-kurs)
+claude plugin marketplace add markesdo/ndu-plugin >/dev/null 2>&1 || true
+if claude plugin install ndu@ndu-kurs >/dev/null 2>&1; then ok "Plugin ndu (Kurs-Befehle)"; else hinweis "Kurs-Plugin nicht installiert – später im Terminal: claude plugin marketplace add markesdo/ndu-plugin && claude plugin install ndu@ndu-kurs"; fi
 
 # ---------------------------------------------------------------------------
 schritt "10/10 Prüfen"
